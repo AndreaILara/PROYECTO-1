@@ -65,6 +65,7 @@ header > img {
 
 .hero-text {
   flex: 1;
+  text-align: justify;
 }
 
 .hero h1 {
@@ -125,7 +126,6 @@ div h2{
 
 .skills {
   max-width: 400px;
-  margin: 20px;
   padding: 20px;
 }
 
@@ -175,6 +175,7 @@ footer {
 
 .contact p{
   padding: 2%;
+  text-align: justify;
 }
 
 .contact ul {
@@ -239,5 +240,17 @@ a:visited {
   }
   .menu{
     display: block;
+  }
+  .hero p, .hero h1{
+    font-size: 16px;
+    text-align: justify;
+  }
+
+  .contact{
+    flex-basis: content;
+  }
+  .contact p , .contact li{
+    font-size: 14px;
+    text-align: justify;
   }
 }
