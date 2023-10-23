@@ -47,7 +47,7 @@ header > img {
 }
 
 
-.menu {
+.respmenu{
   display: none;
   width: 30px;
   height: 30px;
@@ -229,8 +229,59 @@ a:visited {
   header > nav{
     display: none;
   }
-  .menu{
+  .respmenu{
     display: block;
+  }
+  .respmenu a {
+    text-decoration: none;
+    display: block;
+    padding: 2em;
+    max-width: 200px;
+    background: var(--primary-color);
+  }
+  .respmenu input[type="checkbox"], .respmenu .menu{
+    position: absolute;
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 45px;
+    height: 45px;
+  }
+  
+  .respmenu .menu{
+    font-size: 40px;
+    pointer-events: none;
+  }
+  
+  .respmenu input[type="checkbox"] {
+    opacity: 0;
+  }
+  
+  .respmenu {
+    color: var(--secondary-color);
+    position: relative;
+    background: var(--primary-color);
+    min-height: 48px;
+  }
+  
+  .respmenu nav {
+    display: none;
+  }
+  
+  .respmenu input:checked ~ nav {
+    display: block;
+  }
+  
+  .respmenu input:checked ~ .menu {
+    display: none;
+  }
+  
+  .respmenu input:not(:checked) ~ .menu {
+    display: block;
+  }
+  
+  .hero{
+    flex-wrap: wrap;
+    flex-direction: column;
   }
   .hero p, .hero h1{
     font-size: 16px;
@@ -244,4 +295,9 @@ a:visited {
     font-size: 14px;
     text-align: justify;
   }
-}
+
+
+
+  
+  }
+  
