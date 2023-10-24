@@ -235,48 +235,57 @@ a:visited {
   .respmenu a {
     text-decoration: none;
     display: block;
-    padding: 2em;
-    max-width: 200px;
+    margin-right: 20px;
+    padding: 10%;
+    width: 200px;
     background: var(--primary-color);
   }
   .respmenu input[type="checkbox"], .respmenu .menu{
     position: absolute;
-    box-sizing: border-box;
-    margin: 0 auto;
-    width: 45px;
+    box-sizing:content-box;
+    margin-right: 20px;
     height: 45px;
+    width: 45px;
   }
   
   .respmenu .menu{
     font-size: 40px;
-    pointer-events: none;
+    pointer-events:none;
+    margin-right: 20px;
   }
   
   .respmenu input[type="checkbox"] {
     opacity: 0;
+    margin-right: 20px;
+
   }
   
   .respmenu {
     color: var(--secondary-color);
     position: relative;
     background: var(--primary-color);
-    min-height: 48px;
+    min-height: 45px;
+    margin-right: 25px;
   }
   
   .respmenu nav {
     display: none;
+    margin-right: 20px;
   }
   
   .respmenu input:checked ~ nav {
     display: block;
+    margin-right: 20px;
   }
   
   .respmenu input:checked ~ .menu {
     display: none;
+    margin-right: 20px;
   }
   
   .respmenu input:not(:checked) ~ .menu {
     display: block;
+    margin-right: 20px;
   }
   
   .hero{
