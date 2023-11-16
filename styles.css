@@ -19,6 +19,10 @@
 body {
   background-color: var(--background-color);
 }
+body.dark-mode{
+  background-color: var(--text-color);
+  color: var(--background-color);
+}
 
 header {
   display: flex;
@@ -52,7 +56,41 @@ header > img {
   width: 30px;
   height: 30px;
 }
+.respmenu label.menu {
+  font-size: 25px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
 
+.respmenu nav {
+  display: none;
+  margin-right: 20px;
+}
+
+.respmenu input:checked ~ nav {
+  display: block;
+  margin-right: 20px;
+}
+
+.respmenu input:checked ~ label.menu {
+  display: none;
+}
+
+.respmenu input:not(:checked) ~ label.menu {
+  display: block;
+}
+#toggle-theme {
+  display: inline-block;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
 .hero {
   display: flex;
   align-items: center;
@@ -79,6 +117,7 @@ header > img {
   text-decoration: none;
   margin-top: 20px;
   border-radius: 5%;
+  margin-bottom: 20px;
 }
 
 .hero-image {
@@ -218,11 +257,11 @@ a {
 }
 
 a:hover {
-  color: var(--primary-color); 
+  color: var(--button-color); 
 }
 
 a:visited {
-  color: var(--text-color); 
+  color: var(--button-color); 
 }
 
 @media (max-width: 768px) {
